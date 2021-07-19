@@ -2,26 +2,41 @@
 {% block title %}URL Shortner{% endblock %}
 {% block content %}
 <div class="container">
-    <h1>URL Shortner</h1>
-</div>
-<div class="container">
-    
+
+    <div class="row mb-5">
+    <div class="col">
+        <h3 class="text-center">Website</h3>
     <form action="your-url" method="POST">
-        <label for="url">Website URL</label>
-        <input type="url" name="url" value="" required><br>
-        <label for="code">Short Name</label>
-        <input type="text" name="code" value="" required><br>
-        <input type="submit" value="Shorten">
+        <div class="">
+        <label for="url" class="form-label">Website URL</label>
+        <input class="form-control" type="url" name="url" value="" required><br>
+        </div>
+        <div class="">
+        <label for="code" class="form-label">Short Name</label>
+        <input class="form-control" type="text" name="code" value="" required><br>
+        </div>
+        <div class="d-grid gap-2">
+        <input class="btn btn-secondary" type="submit" value="Shorten">
+        </div>
     </form>
-
-
+    </div>
+    <div class="col">
+        <h3 class="text-center">File</h3>
     <form action="your-url" method="POST" enctype="multipart/form-data">
-        <label for="file">File</label>
-        <input type="file" name="file" value="" required><br>
-        <label for="code">Short Name</label>
-        <input type="text" name="code" value="" required><br>
-        <input type="submit" value="Shorten">
+        <div class="">
+        <label for="file" class="form-label">File</label>
+        <input class="form-control" type="file" name="file" value="" required><br>
+        </div>
+        <div class="">
+        <label for="code" class="form-label">Short Name</label>
+        <input class="form-control" type="text" name="code" value="" required><br>
+        </div>
+        <div class="d-grid gap-2">
+        <input class="btn btn-secondary" type="submit" value="Shorten">
+        </div>
     </form>
+    </div>
+    </div>
 
     {% if codes %}
         <h2>Codes you have created</h2>

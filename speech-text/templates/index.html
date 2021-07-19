@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Speech Recognizer{% endblock %}
+{% block content %}
+<div>
+    <h1>Upload New File</h1>
+
+</div>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file"><br>
+    <input type="submit" value="Transcribe">
+</form>
+
+<div>
+    {% if transcript %}
+    <h3>Transcript</h3>
+    <p>{{ transcript }}</p>
+    {% endif %}
+</div>
+{% endblock %}
